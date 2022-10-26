@@ -1,8 +1,11 @@
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
+
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ToggleButton from '../../Buttons/ToggleButton/ToggleButton';
 const Header = () => {
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto font-extrabold  font-sans'>
          <Navbar
   fluid={true}
   rounded={true}
@@ -14,7 +17,7 @@ const Header = () => {
       alt="Flowbite Logo"
     />
     <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-      Flowbite
+   Learn Code
     </span>
   </Navbar.Brand>
   <div className="flex md:order-2">
@@ -48,24 +51,29 @@ const Header = () => {
     <Navbar.Toggle />
   </div>
   <Navbar.Collapse>
-    <Navbar.Link
+            <Link
+              className='text-xl font-serif'
       href="/navbars"
       active={true}
     >
       Home
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      About
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Services
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Pricing
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Contact
-    </Navbar.Link>
+    </Link>
+            <Link  className='text-xl font-serif'>
+              Courses
+            </Link>
+   
+            <Link  className='text-xl font-serif'>
+              LogIn
+            </Link>
+            
+            <Link  className='text-xl font-serif'>
+            LogOut
+            </Link>
+   
+            <div className='text-teal-500'>
+             <ToggleButton></ToggleButton>
+           </div>
+  
   </Navbar.Collapse>
             </Navbar>
            
