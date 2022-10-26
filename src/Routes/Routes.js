@@ -1,7 +1,8 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
-import ToastAdd from "../ToastAdd/ToastAdd";
+import LogIn from "../RegisterForm/LogIn/LogIn";
+import Home from "../Pages/Home/Home"
 
 
 export const router =createBrowserRouter([
@@ -12,8 +13,12 @@ export const router =createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <ToastAdd></ToastAdd>
-             }
+                element: <Home></Home>
+            },
+            {
+                path: '/login',
+                element: <LogIn></LogIn>
+            }
            
 ] 
 },

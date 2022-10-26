@@ -8,12 +8,10 @@ import {  Toast } from 'flowbite-react';
 import { RiFireFill } from "react-icons/ri";
 import { MdLocalOffer } from "react-icons/md";
 
-
-
 const Header = () => {
   return (
-      <div>
-        <div className='relative w-full'>
+      <div className='mb-8'>
+        <div className='relative w-full '>
             <Toast className='w-full'>
   <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-500 dark:bg-blue-800 dark:text-blue-200 ">
     <MdLocalOffer className="h-5 w-5 text-red-700" />
@@ -85,11 +83,11 @@ const Header = () => {
                Courses
              </Link>
     
-             <Link  className='text-xl font-serif'>
+             <Link to='/login' className='text-xl font-serif'>
                LogIn
              </Link>
              
-             <Link  className='text-xl font-serif'>
+             <Link to='/logout'  className='text-xl font-serif'>
              LogOut
              </Link>
     
