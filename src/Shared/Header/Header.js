@@ -1,6 +1,5 @@
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import React from 'react';
-
 const Header = () => {
     return (
         <div className='container mx-auto'>
@@ -68,7 +67,8 @@ const Header = () => {
       Contact
     </Navbar.Link>
   </Navbar.Collapse>
-</Navbar>
+            </Navbar>
+           
         </div>
     );
 };
