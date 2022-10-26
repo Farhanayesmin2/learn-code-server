@@ -1,7 +1,8 @@
-import { Badge, Sidebar } from 'flowbite-react';
+import { Badge, Button, Sidebar, Toast } from 'flowbite-react';
 import React from 'react';
 import {FcAbout } from "react-icons/fc";
 import {RiMoonFill } from "react-icons/ri";
+import { MdLoop, MdClose } from "react-icons/md";
 const LeftsideNav = () => {
     return (
         <div>
@@ -56,37 +57,43 @@ const LeftsideNav = () => {
     <Sidebar.CTA>
       <div className="mb-3 flex items-center">
         <Badge color="warning">
-          Beta
+          Beta Version
         </Badge>
-        <button
-          aria-label="Close"
-          className="-m-1.5 ml-auto inline-flex h-6 w-6 rounded-lg bg-blue-50 p-1 text-blue-900 hover:bg-blue-200 focus:ring-2 focus:ring-blue-400 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800"
-          type="button"
-        >
-          <svg
-            aria-hidden={true}
-            className="h-4 w-4"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
+       
       </div>
-      <p className="mb-3 text-sm text-blue-900 dark:text-blue-400">
-        Preview the new Flowbite dashboard navigation! You can turn the new navigation off for a limited time in your profile.
-      </p>
-      <a
-        className="text-sm text-blue-900 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-        href="#"
-      >
-        Turn new navigation off
-      </a>
+              <div>
+              <Toast>
+  <div className="flex !items-start">
+    <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-500 dark:bg-blue-900 dark:text-blue-300">
+      <MdLoop className="h-5 w-5" />
+    </div>
+    <div className="ml-3 text-sm font-normal">
+      <span className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+        Update available
+      </span>
+      <div className="mb-2 text-sm font-normal">
+        A new software version is available for download.
+      </div>
+      <div className="flex gap-2">
+        <div className="w-full">
+          <Button size="xs">
+            Update
+          </Button>
+        </div>
+        <div className="w-full">
+          <Button
+            color="light"
+            size="xs"
+          >
+           <MdClose></MdClose>
+          </Button>
+        </div>
+      </div>
+    </div>
+    <Toast.Toggle />
+  </div>
+</Toast>
+     </div>
     </Sidebar.CTA>
   </Sidebar>
 </div>
