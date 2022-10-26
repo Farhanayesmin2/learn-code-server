@@ -1,6 +1,7 @@
 import { Badge, Sidebar } from 'flowbite-react';
 import React from 'react';
-
+import {FcAbout } from "react-icons/fc";
+import {RiMoonFill } from "react-icons/ri";
 const LeftsideNav = () => {
     return (
         <div>
@@ -10,43 +11,43 @@ const LeftsideNav = () => {
       <Sidebar.ItemGroup>
         <Sidebar.Item
           href="#"
-          icon={HiChartPie}
+          icon={RiMoonFill} 
         >
           Dashboard
         </Sidebar.Item>
         <Sidebar.Item
           href="#"
-          icon={HiViewBoards}
+          icon={FcAbout}
         >
           Kanban
         </Sidebar.Item>
         <Sidebar.Item
           href="#"
-          icon={HiInbox}
+          icon={FcAbout}
         >
           Inbox
         </Sidebar.Item>
         <Sidebar.Item
           href="#"
-          icon={HiUser}
+          icon={FcAbout}
         >
           Users
         </Sidebar.Item>
         <Sidebar.Item
           href="#"
-          icon={HiShoppingBag}
+          icon={FcAbout}
         >
           Products
         </Sidebar.Item>
         <Sidebar.Item
           href="#"
-          icon={HiArrowSmRight}
+          icon={FcAbout}
         >
           Sign In
         </Sidebar.Item>
         <Sidebar.Item
           href="#"
-          icon={HiTable}
+          icon={FcAbout}
         >
           Sign Up
         </Sidebar.Item>
