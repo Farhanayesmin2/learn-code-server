@@ -1,11 +1,13 @@
 import React from 'react';
 import {  Link } from 'react-router-dom';
 
+
 const LogIn = () => {
-    return (
-        <div className='font-sans mr-16'> 
+  return (
+      <div className=''>
+        <div className='font-sans '> 
           
-            <div className="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div className="shadow-2xl    bg-gradient-to-tr  from-green-200 via-purple-200 to-pink-200    p-4 w-full max-w-sm  rounded-lg border border-teal-500  sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
   <form className="space-y-6" action="#">
     <h5 className="text-2xl text-center font-bold text-gray-900 dark:text-white ">
      Login
@@ -22,7 +24,7 @@ const LogIn = () => {
         name="email"
         id="email"
         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-        placeholder="name@company.com"
+        placeholder="name"
         required=""
       />
     </div>
@@ -70,7 +72,7 @@ const LogIn = () => {
     </div>
   </form>
 </div>
-
+</div>
            
         </div>
     );

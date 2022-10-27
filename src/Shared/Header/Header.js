@@ -26,7 +26,7 @@ const Header = () => {
             </div>
             <div className='container mx-auto font-extrabold  font-sans '>
           
-          <Navbar
+          <Navbar className='bg-green-200'
    fluid={true}
    rounded={true}
         >

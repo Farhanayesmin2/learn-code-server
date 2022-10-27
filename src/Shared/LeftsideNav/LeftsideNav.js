@@ -3,58 +3,29 @@ import React from 'react';
 import {FcAbout } from "react-icons/fc";
 import {RiMoonFill } from "react-icons/ri";
 import { MdLoop, MdClose } from "react-icons/md";
+import { Link } from 'react-router-dom';
+import Google from '../../Buttons/Google/Google';
+import Github from '../../Buttons/Github/Github';
+import Others from '../Others/Others';
 const LeftsideNav = () => {
     return (
-        <div>
-          <div className="w-fit">
+        <div >
+          <div className="w-fit ">
   <Sidebar aria-label="Sidebar with call to action button example">
     <Sidebar.Items>
       <Sidebar.ItemGroup>
-        <Sidebar.Item
-          href="#"
-          icon={RiMoonFill} 
-        >
-          Dashboard
-        </Sidebar.Item>
-        <Sidebar.Item
-          href="#"
-          icon={FcAbout}
-        >
-          Kanban
-        </Sidebar.Item>
-        <Sidebar.Item
-          href="#"
-          icon={FcAbout}
-        >
-          Inbox
-        </Sidebar.Item>
-        <Sidebar.Item
-          href="#"
-          icon={FcAbout}
-        >
-          Users
-        </Sidebar.Item>
-        <Sidebar.Item
-          href="#"
-          icon={FcAbout}
-        >
-          Products
-        </Sidebar.Item>
-        <Sidebar.Item
-          href="#"
-          icon={FcAbout}
-        >
-          Sign In
-        </Sidebar.Item>
-        <Sidebar.Item
-          href="#"
-          icon={FcAbout}
-        >
-          Sign Up
-        </Sidebar.Item>
+                <Link>
+                  <Google></Google>
+                </Link>
+                <Link>
+                <Github></Github>
+                </Link>
+        
+      
       </Sidebar.ItemGroup>
     </Sidebar.Items>
-    <Sidebar.CTA>
+            <Sidebar.CTA>
+              <Others></Others>
       <div className="mb-3 flex items-center">
         <Badge color="warning">
           Beta Version
