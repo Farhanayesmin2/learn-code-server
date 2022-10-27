@@ -9,8 +9,27 @@ const Register = () => {
           <div className="shadow-2xl bg-gradient-to-tr  from-teal-200 via-gray-200 to-violet-200    p-4 w-full max-w-sm  rounded-lg border border-rose-400  sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
 <form className="space-y-6" action="#">
   <h5 className="text-2xl text-center font-bold text-gray-900 dark:text-white ">
-   Register
+  Sign Up for more Update
   </h5>
+
+  <div>
+    <label
+      htmlFor="name"
+      className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+    >
+      Your name
+    </label>
+    <input
+      type="name"
+      name="name"
+                 
+                  value="name"
+      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+      placeholder="name"
+      required=""
+    />
+  </div>        
+
   <div>
     <label
       htmlFor="email"
@@ -21,7 +40,7 @@ const Register = () => {
     <input
       type="email"
       name="email"
-      id="email"
+     value="email"
       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
       placeholder="name"
       required=""
@@ -37,7 +56,7 @@ const Register = () => {
     <input
       type="password"
       name="password"
-      id="password"
+      value="password"
       placeholder="••••••••"
       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
       required=""
