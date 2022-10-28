@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Courses from '../Courses/Courses';
+import CategoryDetails from '../CategoryDetails/CategoryDetails';
 
 const Category = () => {
     const categoriesCourse = useLoaderData();
@@ -19,10 +19,10 @@ const Category = () => {
 
             <div className='grid md:grid-cols-2 grid-flow-row'>
             {
-                categoriesCourse.map(course =><Courses
+                categoriesCourse.map(course => <CategoryDetails
                     key={course._id}
                     course={course}
-                ></Courses>)
+                ></CategoryDetails>)
             }
             </div>
            

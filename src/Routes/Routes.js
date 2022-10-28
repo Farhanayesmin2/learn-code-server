@@ -6,7 +6,9 @@ import Register from "../RegisterForm/Register/Register";
 import Home from "../Pages/Home/Home"
 import Profile from "../RegisterForm/Profile/Profile";
 import Category from "../Pages/Category/Category"
-import Courses from "../Pages/Courses/Courses"
+
+import CourseDetails from "../Pages/CourseDetails/CourseDetails";
+
 
 export const router =createBrowserRouter([
 
@@ -30,6 +32,11 @@ export const router =createBrowserRouter([
                 path: "/profile",
                 element: <Profile></Profile>
             },
+            {
+                path: "/courses",
+                element: <CourseDetails ></CourseDetails>,
+              loader: ()  => fetch('https://learn-code-server-theta.vercel.app/courses-categories') 
+            },
            
             {
                 path: '/category/:id',
@@ -37,10 +44,13 @@ export const router =createBrowserRouter([
                 loader: ({params}) => fetch(`https://learn-code-server-theta.vercel.app/category/${params.id}`)
             },
             {
-                path: '/courses/:id',
-                element: <Courses></Courses>,
-                loader: ({params}) => fetch(`https://learn-code-server-theta.vercel.app/courses/${params.id}`)
-            },
+                path: '/home'
+            }
+            // {
+            //     path: '/courses/:id',
+            //     element: ,
+            //     loader: ({params}) => fetch(`https://learn-code-server-theta.vercel.app/courses/${params.id}`)
+            // },
            
            
 ] 

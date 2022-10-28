@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { IoDiamondSharp } from "react-icons/io5";
-const Courses = ({course}) => {
+const CategoryDetails = ({course}) => {
 
-  //  const allCourses = useLoaderData();
-    console.log(course);
+ //const allCategoryDetails = useLoaderData();
+   // console.log(allCategoryDetails);
     const { title, details, image_url, category_id } = course;
     return (
         <div className='' >    
@@ -27,14 +27,8 @@ const Courses = ({course}) => {
     </div>
 </div>
 
-
-
-
-
-
-
         </div>
     );
 };
 
-export default Courses;
+export default CategoryDetails;
