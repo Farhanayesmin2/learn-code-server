@@ -22,10 +22,10 @@ const Header = () => {
 
 
   return (
-      <div className='mb-8'>
+      <div className='mb-8 dark:text-white '>
         <div className='relative w-full'>
             <Toast className='w-full '>
-  <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-500 dark:bg-blue-800 dark:text-blue-200 ">
+  <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-500 dark:bg-blue-800 dark:text-white ">
     <MdLocalOffer className="h-5 w-5 text-red-700" />
   </div>
   <div className="ml-3 text-sm font-normal flex">

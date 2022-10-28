@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Google from '../../Buttons/Google/Google';
 import Github from '../../Buttons/Github/Github';
 import Others from '../Others/Others';
-import ButtonGroup from 'flowbite-react/lib/esm/components/ButtonGroup';
+
 
 
 
@@ -45,7 +45,7 @@ const LeftsideNav = () => {
   </span>
   {/* bg-gradient-to-r from-cyan-200 via-rose-300 to-yellow-200 bg-gradient-to-r from-cyan-200 via-rose-300 to-yellow-200 */}
                 </button>
-                <button type="button" class="text-white bg-gradient-to-r from-cyan-200 via-rose-300 to-yellow-200 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-cyan-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg  px-5 py-2.5 text-center mr-2 mb-2 flex text-md">Get Premium <IoDiamondSharp className='pt-1 h-7 w-6 text-blue-600 pb-1 pl-1'></IoDiamondSharp> </button>
+                <button type="button" class="text-white bg-gradient-to-r from-cyan-200 via-rose-300 to-yellow-200 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-cyan-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg  px-5 py-2.5 text-center mr-2 mb-2 flex text-md"><Link className='flex' to="/login">Get Premium<IoDiamondSharp className='pt-1 h-7 w-6 text-blue-600 pb-1 pl-1'></IoDiamondSharp></Link> </button>   
               <div>
                 {
                     categories.map(category => <p key={category.id}>
