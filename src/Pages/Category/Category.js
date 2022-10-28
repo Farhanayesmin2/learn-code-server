@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CategoryDetails from '../CategoryDetails/CategoryDetails';
-
+import CheckOut from '../CheckOut/CheckOut'
 const Category = () => {
     const categoriesCourse = useLoaderData();
     console.log(categoriesCourse);
@@ -23,6 +23,12 @@ const Category = () => {
                     key={course._id}
                     course={course}
                 ></CategoryDetails>)
+            }
+            {
+                categoriesCourse.map(course => <CheckOut
+                    key={course._id}
+                    course={course}
+                ></CheckOut>)
             }
             </div>
            
