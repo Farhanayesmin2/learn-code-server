@@ -11,8 +11,8 @@ import { MdLocalOffer } from "react-icons/md";
 const Header = () => {
   return (
       <div className='mb-8'>
-        <div className='relative w-full '>
-            <Toast className='w-full'>
+        <div className='relative w-full'>
+            <Toast className='w-full '>
   <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-500 dark:bg-blue-800 dark:text-blue-200 ">
     <MdLocalOffer className="h-5 w-5 text-red-700" />
   </div>
@@ -24,16 +24,17 @@ const Header = () => {
           </Toast> 
          
             </div>
-            <div className='container mx-auto font-extrabold  font-sans '>
+            <div className='container mx-auto font-extrabold shadow-lg font-sans '>
           
-          <Navbar className='bg-green-200'
+          <Navbar className='bg-gray-50 hover:text-green-800'
    fluid={true}
    rounded={true}
         >
           
    <Navbar.Brand href="https://flowbite.com/">
      <img
-       src="https://flowbite.com/docs/images/logo.svg"
+       src="https://toppng.com/uploads/preview/free-fire-png-logo-115690680921wyscrhw1c.png"
+       
        className="mr-3 h-6 sm:h-9"
        alt="Flowbite Logo"
      />

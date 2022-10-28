@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext/UserContext';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FcTabletAndroid } from "react-icons/fc";
 
 const Register = () => {
   const [error, setError] = useState('');
@@ -28,23 +30,30 @@ const Register = () => {
               setError('');
               form.reset();
               handleUpdateUserProfile(name, photoURL);
-              handleEmailVerification();
-              //.success('Please verify your email address.')
+             handleEmailVerification();
+          
+            
           })
-          .catch(e => {
-              console.error(e);
-              setError(e.message);
+          .catch(error => {
+              console.error(error);
+             // setError(error.message);
+             toast.error(error.message)
           });
     
     
           if (password.length < 6) {
-            setError("Password Should be 6 character or more.")
+            toast.error("Password Should be 6 character or more.")
         }
         if (password !== confirm) {
-            setError("Your Password did not match.");
+            toast.error("Your Password did not match.");
             return;
         }
-    
+    if (password === confirm) {
+          
+      if (!error)  {
+        toast.success("Successfully Register");
+      }
+    }
     
     
   }
@@ -77,8 +86,8 @@ const Register = () => {
              <section className=" min-h-screen flex items-center justify-center">
              <div className="shadow-2xl bg-gradient-to-tr  from-teal-200 via-gray-200 to-violet-200    p-4 w-full max-w-sm  rounded-lg border border-rose-400  sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
 <form onSubmit={handleRegister}  className="space-y-6" >
-  <h5 className="text-2xl text-center font-bold text-gray-900 dark:text-white ">
-  Sign Up for more Update
+  <h5 className="text-2xl text-center font-bold text-gray-900 dark:text-white flex">
+  Sign Up<FcTabletAndroid className='h-8 pt-2'></FcTabletAndroid>
   </h5>
 
   <div>
@@ -162,7 +171,19 @@ const Register = () => {
         
       </div>
       <p className="text-danger">
-                {error}
+                      {error}
+                      <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
             </p>
     </div>
     <Link
@@ -188,7 +209,7 @@ const Register = () => {
 </div>
     {/* image */}
     <div className="lg:block hidden w-1/2">
-      <img alt='login-img'
+      <img alt='/'
         className="rounded-3xl  "
         src="https://fgstardustresort.com/wp-content/uploads/2021/04/signin-image.jpg"
       />
