@@ -43,8 +43,9 @@ const LeftsideNav = () => {
   <span class="inline-flex justify-center items-center ml-2 w-4 h-4 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
   {categories.length}
   </span>
-  {/* bg-gradient-to-r from-cyan-200 via-rose-300 to-yellow-200 bg-gradient-to-r from-cyan-200 via-rose-300 to-yellow-200 */}
-                </button>
+
+  </button>
+                
                 <button type="button" class="text-white bg-gradient-to-r from-cyan-200 via-rose-300 to-yellow-200 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-cyan-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg  px-5 py-2.5 text-center mr-2 mb-2 flex text-md"><Link className='flex' to="/login">Get Premium<IoDiamondSharp className='pt-1 h-7 w-6 text-blue-600 pb-1 pl-1'></IoDiamondSharp></Link> </button>   
               <div>
                 {

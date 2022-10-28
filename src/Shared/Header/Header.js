@@ -24,13 +24,13 @@ const Header = () => {
   return (
       <div className='mb-8 dark:text-white '>
         <div className='relative w-full'>
-            <Toast className='w-full '>
+            <Toast className='w-full animate-bounce '>
   <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-500 dark:bg-blue-800 dark:text-white ">
-    <MdLocalOffer className="h-5 w-5 text-red-700" />
+    <MdLocalOffer className="h-5 w-5 animate-spin text-red-700" />
   </div>
   <div className="ml-3 text-sm font-normal flex">
-            <h1 >Get 60% Offer  </h1> 
-            <RiFireFill className='h-5 w-8  text-yellow-500'> </RiFireFill>
+            <h1 className='text-lg text-black font-mono'>Get 60% Offer  </h1> 
+            <RiFireFill className='h-6 w-9  text-yellow-400'> </RiFireFill>
   </div>
   <Toast.Toggle />
           </Toast> 
