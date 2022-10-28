@@ -11,10 +11,10 @@ const Main = () => {
         <div>
             <Header></Header>
             <div className='container mx-auto grid col-span-12  grid-flow-col'>
-                <div className=' col-span-4'>
+                <div className=' col-span-5'>
                 <LeftsideNav></LeftsideNav>
                 </div>
-                <div className=' col-span-8  '>
+                <div className=' col-span-7  '>
               <Outlet></Outlet>
                 </div>
             

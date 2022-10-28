@@ -1,5 +1,5 @@
-import { Avatar, Dropdown, Navbar } from 'flowbite-react';
-
+import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
+import { FaUserCircle } from "react-icons/fa";
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ToggleButton from '../../Buttons/ToggleButton/ToggleButton';
@@ -7,8 +7,20 @@ import ToggleButton from '../../Buttons/ToggleButton/ToggleButton';
 import {  Toast } from 'flowbite-react';
 import { RiFireFill } from "react-icons/ri";
 import { MdLocalOffer } from "react-icons/md";
+import { useContext } from 'react';
+import { AuthContext } from '../../Contexts/UserContext/UserContext';
 
 const Header = () => {
+
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+      logOut()
+          .then(() => { })
+          .catch(error => console.error(error))
+  }
+
+
   return (
       <div className='mb-8'>
         <div className='relative w-full'>
@@ -42,19 +54,17 @@ const Header = () => {
     Learn Code
      </span>
    </Navbar.Brand>
-   <div className="flex md:order-2">
-     <Dropdown
-       arrowIcon={false}
-       inline={true}
-       label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded={true}/>}
+          <div className="flex md:order-2">
+
+            <Dropdown
      >
+
+
        <Dropdown.Header>
          <span className="block text-sm">
            Bonnie Green
          </span>
-         <span className="block truncate text-sm font-medium">
-           name@flowbite.com
-         </span>
+        
        </Dropdown.Header>
        <Dropdown.Item>
          Dashboard
@@ -71,7 +81,7 @@ const Header = () => {
        </Dropdown.Item>
      </Dropdown>
      <Navbar.Toggle />
-   </div>
+</div>
    <Navbar.Collapse>
              <Link
                className='text-xl font-serif'
@@ -82,21 +92,62 @@ const Header = () => {
      </Link>
              <Link  className='text-xl font-serif'>
                Courses
-             </Link>
-    
-             <Link to='/login' className='text-xl font-serif'>
-               LogIn
-             </Link>
+            </Link>
+            
+            <>
+              {
+                user?.email ?
              
-             <Link to='/logout'  className='text-xl font-serif'>
-             LogOut
-             </Link>
+               <p>Hello</p>
+                  :
+                  
+                          
+                  <Link to='/login' className='text-lg  font-serif'>
+                  Login
+                </Link>
+              }
+            </>
+          
+       
+             
+          
+
+                        {/*
+                        
+                
+                         <Link to='/register'  className='text-xl  font-serif'>
+                  Register
+                  </Link> 
+                        
+                        
+                        
+                        
+                        
+                        <Link to="/profile">
+                            {user?.photoURL ?
+                                <img alt='profile-pic'
+                                    style={{ height: '30px' }}
+                                    roundedCircle
+                                    src={user?.photoURL}>
+                                </img>
+                                : <FaUserCircle className='w-8 h-8 pt-1'></FaUserCircle>
+                            }
+                        </Link> */}
+
+
+
+
+
     
              <div className='text-teal-500'>
               <ToggleButton></ToggleButton>
             </div>
    
-   </Navbar.Collapse>
+          </Navbar.Collapse>
+          
+         
+
+
              </Navbar>
             
            

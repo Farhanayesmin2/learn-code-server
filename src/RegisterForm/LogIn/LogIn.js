@@ -30,13 +30,13 @@ const LogIn = () => {
               console.log(user);
               form.reset();
               setError('');
-              if(user.emailVerified){
-                  navigate(from, {replace: true});
-              }
-              else {
+            //   if(user.emailVerified){
+            //       navigate(from, {replace: true});
+            //   }
+            //   else {
                 
-                toast.error('Your email is not verified. Please verify your email address.')
-            }
+            //     toast.error('Your email is not verified. Please verify your email address.')
+            // }
             
           })
           .catch(error => {
