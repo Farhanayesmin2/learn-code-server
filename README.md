@@ -15,6 +15,10 @@ In the project use:
 4. react icons:https://react-icons.github.io/react-icons/
 5. pdf to react:https://react-pdf.org/
 6. toast: https://www.npmjs.com/package/react-toastify
+7. React Env: https://create-react-app.dev/docs/adding-custom-environment-variables/
+
+Source: Google
+Project Idea: themeforest
 
 ### `Live Link`
 
@@ -32,15 +36,9 @@ GitHub Code Link:
 
 2. Client Site Code Link: https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Farhanayesmin2
 
-### `npm run build`
+### `Api Key`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For Secure: Use Api key
 
 ### `npm run eject`
 
