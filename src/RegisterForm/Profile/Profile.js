@@ -6,7 +6,7 @@ import { AuthContext } from '../../Contexts/UserContext/UserContext'
 
 const Profile = () => {
     const {user} = useContext(AuthContext);
-   // const [name, setName] = useState(user.displayName);
+    const [name, setName] = useState(user.displayName);
     const photoURLRef = useRef(user.photoURL);
 
     const handleSubmit = event => {
@@ -14,9 +14,9 @@ const Profile = () => {
         console.log(photoURLRef.current.value);
     }
 
-    // const handleNameChange = event =>{
-    //     setName(event.target.value)
-    // }
+    const handleNameChange = event =>{
+        setName(event.target.value)
+    }
 
     return (
 

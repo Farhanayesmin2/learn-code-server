@@ -23,13 +23,16 @@ const Category = () => {
                     key={course._id}
                     course={course}
                 ></CategoryDetails>)
-            }
-            {
+                }
+                {/* <div>
+                     {
                 categoriesCourse.map(course => <CheckOut
                     key={course._id}
                     course={course}
                 ></CheckOut>)
-            }
+            } 
+            </div> */}
+          
             </div>
            
         </div>
