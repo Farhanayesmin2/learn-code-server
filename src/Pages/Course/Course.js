@@ -5,6 +5,7 @@ import { IoDiamondSharp } from "react-icons/io5";
 const Course = ({ category }) => {
   const { name, details, price, image_url, category_id } = category;
   console.log(category);
+
   return (
     <div>
       <div className="">

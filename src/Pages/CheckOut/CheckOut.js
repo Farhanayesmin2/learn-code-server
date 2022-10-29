@@ -1,18 +1,33 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { IoDiamondSharp } from "react-icons/io5";
+import ReactToPdf from "react-to-pdf";
+import { VscFilePdf } from "react-icons/vsc";
 
 const CheckOut = () => {
-  const allCategoryDetails = useLoaderData();
-
-  const { title, details, author, image_url, total_view, rating } =
+const allCategoryDetails = useLoaderData();
+ const { title, details, author, image_url, total_view, rating } =
     allCategoryDetails;
   console.log(allCategoryDetails);
-
+  const ref = React.createRef();
   return (
     <div>
+      <ReactToPdf targetRef={ref} filename="div-blue.pdf">
+        {({ toPdf }) => (
+          //   <button onClick={toPdf}>Generate pdf</button>
+
+          <button
+            onClick={toPdf}
+            type="button"
+            class="text-gray-900 w-56 h-12 bg-gradient-to-r from-cyan-900 via-cyan-300 to-cyan-900 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 flex font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-xl mr-2 mb-2"
+          >
+            Download Pdf
+            <VscFilePdf className=" lg:text-xl"></VscFilePdf>
+          </button>
+        )}
+      </ReactToPdf>
       <div className=" my-5 font-serif dark:text-black bg-gradient-to-br from-green-200 via-lime-200 to-green-400 w-full max-w-sm  rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
-        <div>
+        <div ref={ref}>
           <img
             className="p-8 rounded-t-lg"
             src={image_url}
