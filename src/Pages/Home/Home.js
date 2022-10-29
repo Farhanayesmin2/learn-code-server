@@ -1,12 +1,41 @@
 import { Card } from "flowbite-react";
 import React from "react";
-
+import ReactToPdf from "react-to-pdf"
+import { VscFilePdf } from "react-icons/vsc";
 const Home = () => {
+  const ref = React.createRef();
   return (
     <div>
       <h1>Our Course Price</h1>
-      <div className="grid pt-5 grid-flow-row lg:grid-cols-3 gap-5">
-        <div>
+      
+    <ReactToPdf targetRef={ref} filename="div-blue.pdf">
+        {({toPdf}) => (
+         //   <button onClick={toPdf}>Generate pdf</button>
+          
+<button
+              onClick={toPdf}
+              type="button"
+              class="text-gray-900 w-56 h-12 bg-gradient-to-r from-cyan-900 via-cyan-300 to-cyan-900 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 flex font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-xl mr-2 mb-2"
+            >
+              Download Pdf 
+              <VscFilePdf className=" lg:text-xl"></VscFilePdf>
+            </button>
+          
+          
+        )}
+      </ReactToPdf>
+      
+      {/* <button
+              onClick={toPdf}
+              type="button"
+              class="text-gray-900 w-56 h-12 bg-gradient-to-r from-lime-900 via-lime-300 to-lime-900 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 flex font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-xl mr-2 mb-2"
+            >
+              Download Pdf 
+              <VscFilePdf className=" lg:text-xl"></VscFilePdf>
+            </button> */}
+  
+      <div ref={ref} className="grid pt-5 grid-flow-row lg:grid-cols-3 gap-5">
+        <div >
           <div className="max-w-sm">
             <Card>
               <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
