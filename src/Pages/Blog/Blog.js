@@ -2,8 +2,8 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div>
-      <div className="p-4 w-full text-start mt-5 bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div >
+      <div className="bg-gradient-to-r from-cyan-900 via-green-200 to-cyan-700 p-4 w-full text-start mt-5 bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
           What is cors?
         </h5>
@@ -17,7 +17,7 @@ const Blog = () => {
           Leroy Jenkins
         </p>
       </div>
-      <div className="p-4 text-start mt-5 w-full  bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="bg-gradient-to-br from-cyan-900 via-green-200 to-cyan-700   p-4 text-start mt-5 w-full  bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
           Why we using firebase?
         </h5>
@@ -34,7 +34,7 @@ const Blog = () => {
         password. Other ways to authenticate can be through cards, retina scans,
         voice recognition, and fingerprints.
       </div>
-      <div className="p-4 text-start mt-5 w-full  bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="bg-gradient-to-tr from-cyan-900 via-green-200 to-cyan-700  p-4 text-start mt-5 w-full  bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
         How does the private route work?
         </h5>
@@ -46,7 +46,7 @@ const Blog = () => {
 
 
         </div>
-      <div className="p-4 text-start mt-5 w-full  bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="bg-gradient-to-l from-cyan-900 via-green-200 to-cyan-700 p-4 text-start mt-5 w-full  bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
         What is Node?
         </h5>

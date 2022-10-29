@@ -11,6 +11,7 @@ import CourseDetails from "../Pages/CourseDetails/CourseDetails";
 import PageNotFound from "../Pages/PageNotFound/PageNotFound";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Blog from "../Pages/Blog/Blog";
+import Faq from "../Pages/Faq/Faq";
 
 
 export const router =createBrowserRouter([
@@ -19,6 +20,10 @@ export const router =createBrowserRouter([
         path: '/',
         element: <Main></Main>,
         children: [
+            {
+                path: '/home',
+                element: <Home></Home>
+            },
            
             {
                 path: '/login',
@@ -31,6 +36,10 @@ export const router =createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/faq',
+                element: <Faq></Faq>
             },
             {
                 path: "/profile",
@@ -63,10 +72,7 @@ export const router =createBrowserRouter([
     path: '*',
     element: <PageNotFound></PageNotFound>
 },
-{
-    path: '/',
-    element: <Home></Home>
-},
+
 
 ])
 
