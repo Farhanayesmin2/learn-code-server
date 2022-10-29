@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { FcKindle } from "react-icons/fc";
 import { GoogleAuthProvider } from 'firebase/auth';
+import Github from '../../Buttons/Github/Github';
 
 
 const LogIn = () => {
@@ -163,7 +164,10 @@ theme="light"
           />
         </svg>
         Login with Google
-      </button>
+              </button>
+              <div className='mt-5 text-center'>
+                <Github></Github>
+              </div>
       <div className="mt-5 text-xs border-b border-[#002D74] py-4 text-[#002D74]">
         <Link >Forgot your password?/</Link>
       </div>

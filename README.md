@@ -2,22 +2,33 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+In the project use:
 
-### `npm start`
+1. install flowbite react:https://flowbite-react.com/
+2. Tailwind css:https://tailwindcss.com/
+3. react router dom:https://reactrouter.com/
+   4: firebase install:https://console.firebase.google.com/project/learn-code-b31de/authentication/providers
+4. react icons:https://react-icons.github.io/react-icons/
+5. pdf to react:https://react-pdf.org/
+6. toast: https://www.npmjs.com/package/react-toastify
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Live Link`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Live Server link: https://learn-code-b31de.web.app
 
-### `npm test`
+### for data server link.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Server Site Link: https://learn-code-server-theta.vercel.app
+
+#### `Code Link`
+
+GitHub Code Link:
+
+1. Server Site Code Link: https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Farhanayesmin2
+
+2. Client Site Code Link: https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Farhanayesmin2
 
 ### `npm run build`
 
