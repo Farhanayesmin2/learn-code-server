@@ -8,45 +8,63 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { FcKindle } from "react-icons/fc";
+import { GoogleAuthProvider } from 'firebase/auth';
 
 
 const LogIn = () => {
   const [error, setError] = useState('');
-  const { logIn, setLoading } = useContext(AuthContext);
+  const { logIn, setLoading, providerLogin } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [user, setUser] = useState({});
+  const provider = new GoogleAuthProvider();
 
   const from = location.state?.from?.pathname || '/';
 
   const handleLogin = event => {
-      event.preventDefault();
-      const form = event.target;
-      const email = form.email.value;
-      const password = form.password.value;
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
 
-      logIn(email, password)
-          .then(result => {
-              const user = result.user;
-              console.log(user);
-              form.reset();
-              setError('');
-            //   if(user.emailVerified){
-            //       navigate(from, {replace: true});
-            //   }
-            //   else {
+    logIn(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+        setError('');
+        if (user.emailVerified) {
+          navigate(from, { replace: true });
+        }
+        else {
                 
-            //     toast.error('Your email is not verified. Please verify your email address.')
-            // }
-            
-          })
-          .catch(error => {
-              console.error(error)
-              setError(error.message);
-          })
-          .finally(() => {
-              setLoading(false);
-          })
+          toast.error('Your email is not verified. Please verify your email address.')
+        }
+        
 
+
+            
+      })
+      .catch(error => {
+        console.error(error)
+        setError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      })
+   
+  }
+  const googleAuthHandler = () => {
+    providerLogin(provider)
+      .then(result => {
+        const user = result.user;
+        setUser(user);
+        console.log(user);
+      })
+      .catch(error => {
+        console.error('error', error);
+      })
 
   }
 
@@ -120,7 +138,7 @@ theme="light"
         <p className="text-center text-sm">OR</p>
         <hr className="border-gray-400" />
       </div>
-      <button className="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]">
+      <button onClick={googleAuthHandler}    className="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]">
         <svg
           className="mr-3"
           xmlns="http://www.w3.org/2000/svg"
